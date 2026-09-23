@@ -5,6 +5,7 @@ import DayTabs from './components/DayTabs.jsx'
 import FilterBar from './components/FilterBar.jsx'
 import ExerciseCard from './components/ExerciseCard.jsx'
 import AddExerciseModal from './components/AddExerciseModal.jsx'
+import PWAPrompt from './components/PWAPrompt.jsx'
 
 const TODAY_KEY = DAYS[(new Date().getDay() + 6) % 7].key // JS Sunday=0 → align to Monday-first list
 
@@ -29,6 +30,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <PWAPrompt />
       <header className="hero">
         <p className="eyebrow-free-label">Two dumbbell rods · 3 ft barbell · ~30 kg of plates · skipping rope · gripper</p>
         <h1>7-Day Home Circuit</h1>

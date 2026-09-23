@@ -54,3 +54,11 @@ src/
 
 - Exercises you add are stored in the browser's `localStorage`, so they persist across visits on the same device/browser but aren't shared across devices. To make them shared across everyone who opens the site, swap `useExercises.js` for a small backend or a service like Supabase/Firebase.
 - Two exercises (Plank, Diamond/close-grip push-ups) and a few Upper Body B moves shipped without a video link in the original brief, so they show a small original illustration instead — swap in a real video any time by editing `src/data/exercises.js` or using the in-app "Add exercise" form with the same name.
+
+## Progressive Web App (PWA)
+
+This app is configured as a full Progressive Web App:
+- **Offline Capable**: Workbox precaches HTML, JS, CSS, and static assets, while Google Fonts are cached at runtime. Workouts and custom exercises function completely offline.
+- **Installable**: Can be installed to home screens on iOS (via "Add to Home Screen"), Android, macOS, and Windows.
+- **Auto-Update**: Background service worker updates automatically and notifies users when new versions are available.
+

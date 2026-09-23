@@ -546,3 +546,160 @@ button:focus-visible {
     transition: none !important;
   }
 }
+
+/* ---------- PWA Elements ---------- */
+
+.pwa-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 12px;
+  min-height: 32px;
+}
+
+.pwa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.offline-badge {
+  background: rgba(224, 102, 90, 0.15);
+  border: 1px solid rgba(224, 102, 90, 0.35);
+  color: #ff8b7e;
+}
+
+.pwa-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.offline-dot {
+  background: #e0665a;
+  box-shadow: 0 0 6px #e0665a;
+}
+
+.pwa-install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(242, 169, 59, 0.15), rgba(242, 169, 59, 0.05));
+  border: 1px solid rgba(242, 169, 59, 0.4);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pwa-install-btn:hover {
+  background: var(--accent);
+  color: #15171a;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(242, 169, 59, 0.25);
+}
+
+.pwa-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(30, 33, 36, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  color: var(--text-strong);
+  font-size: 0.88rem;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pwa-toast-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pwa-toast-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.pwa-toast-btn.reload {
+  background: var(--accent);
+  color: #15171a;
+}
+
+.pwa-toast-btn.reload:hover {
+  background: var(--accent-strong);
+}
+
+.pwa-toast-btn.close {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.pwa-toast-btn.close:hover {
+  color: var(--text-strong);
+}
+
+.ios-guide-modal {
+  max-width: 440px;
+}
+
+.ios-guide-content {
+  padding: 20px 24px 24px;
+}
+
+.ios-guide-content ol {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.ios-guide-content li {
+  margin-bottom: 8px;
+}
+
+.ios-guide-content strong {
+  color: var(--text-strong);
+}
+
+.ios-guide-content .full-width {
+  width: 100%;
+}
